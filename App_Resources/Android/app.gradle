@@ -1,0 +1,26 @@
+dependencies {
+    constraints {
+        implementation "androidx.appcompat:appcompat:1.5.1"
+    }
+}
+
+android {
+  compileSdkVersion 34
+  buildToolsVersion "34"
+  // ndkVersion ""
+
+  defaultConfig {
+    minSdkVersion 23
+    targetSdkVersion 34
+
+    // Version Information
+    versionCode 1
+    versionName "1.0.0"
+    
+    generatedDensities = []
+  }
+
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+}

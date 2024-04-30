@@ -1,10 +1,4 @@
-import { Observable } from '@nativescript/core/data/observable';
-import { ImageAsset } from '@nativescript/core/image-asset';
-import { ImageSource } from '@nativescript/core/image-source';
-import { screen } from '@nativescript/core/platform';
-import { Frame } from '@nativescript/core/ui/frame';
-import { Image } from '@nativescript/core/ui/image';
-import { Page } from '@nativescript/core/ui/page';
+import { Observable, ImageAsset, ImageSource, Frame, Image, Page } from '@nativescript/core';
 import { CameraPlus } from '@nstudio/nativescript-camera-plus';
 import { ObservableProperty } from './observable-property';
 
@@ -63,6 +57,29 @@ export class HelloWorldModel extends Observable {
     });
 
     this._counter = 1;
+  }
+
+  camLoaded(args: any) {
+    const cam = args.object as CameraPlus;
+    console.log(`cam loaded event`);
+    const handle = () => {
+      console.log("sizes", cam.getAvailablePictureSizes("16:9"));
+      cam.autoFocus = true;
+      try {
+        const flashMode = args.object.getFlashMode();
+        console.log(`flashMode in loaded event = ${flashMode}`);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    cam.hasCameraPermission().then((granted) => {
+      console.log("hasPerms:", granted);
+      if (granted) {
+        handle();
+      } else {
+        cam.requestCameraPermissions().then(() => handle());
+      }
+    });
   }
 
   public recordDemoVideo() {
