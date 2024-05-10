@@ -1,16 +1,11 @@
-dependencies {
-    constraints {
-        implementation "androidx.appcompat:appcompat:1.5.1"
-    }
-}
-
 android {
+  namespace "org.nativescript.demo.markus123"
   compileSdkVersion 34
   buildToolsVersion "34"
   // ndkVersion ""
 
   defaultConfig {
-    minSdkVersion 23
+    minSdkVersion 24
     targetSdkVersion 34
 
     // Version Information

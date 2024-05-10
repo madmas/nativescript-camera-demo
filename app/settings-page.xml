@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" shownModally="pageLoaded">
+  <GridLayout rows="auto, *" backgroundColor="#0f0e0f">
+    <Label text="Settings" textAlignment="center" marginLeft="8" fontSize="16"/>
+
+    <Image src="res://ic_close" width="24" height="24" horizontalAlignment="right" tap="{{ close }}" margin="8"/>
+
+    <GridLayout row="1" columns="auto,auto,*" rows="auto,auto,auto" margin="20 8 0 8">
+    <Label margin="8 0" text="Camera Devices" colSpan="3"/>
+
+    <GridLayout row="1" backgroundColor="#0a0a0a" colSpan="3" rows="auto,auto,1,auto,auto" columns="auto,auto,*" padding="8" borderRadius="4">
+    <Image width="24" height="24" src="res://ic_photo_camera_back" />
+    <Label text="Back" col="1"/>
+     <Button text="{{ selectedBack }}" col="2" tap="{{ selectBackCamera }}"/>
+     <Label row="1" colSpan="3" text="Select a lens for the front camera"/>
+
+     <ContentView margin="4 0" height="1" row="2" colSpan="3" width="100%" backgroundColor="#5a5a5a"/>
+
+    <Image  width="24" height="24"  src="res://ic_photo_camera" row="3"/>
+     <Label text="Front" col="1" row="3"/>
+    <Button text="{{ selectedFront }}" col="2" row="3" tap="{{ selectFrontCamera }}"/>
+     <Label text="Select a lens for the back camera" row="4" colSpan="3"/>
+    </GridLayout>
+    </GridLayout>
+
+ </GridLayout>
+
+  </Page>
