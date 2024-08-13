@@ -1,14 +1,14 @@
 {
   "dependencies": {
-    "@nstudio/nativescript-camera-plus": "5.0.0-alpha.6",
+    "@nstudio/nativescript-camera-plus": "5.0.0-alpha.7",
     "@nativescript/theme": "~3.0.2",
     "@nativescript/core": "~8.7.0"
   },
   "devDependencies": {
-    "@nativescript/ios": "~8.7.0",
-    "@nativescript/types": "~8.7.0",
-    "@nativescript/webpack": "~5.0.21",
-    "@nativescript/android": "8.8.0-alpha.11",
+    "@nativescript/ios": "~8.8.0",
+    "@nativescript/types": "~8.8.0",
+    "@nativescript/webpack": "~5.0.22",
+    "@nativescript/android": "~8.8.0",
     "typescript": "~5.4.0"
   },
   "scripts": {
