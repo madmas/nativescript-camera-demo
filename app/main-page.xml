@@ -1,13 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="pageLoaded" class="page" 
   xmlns:Cam="@nstudio/nativescript-camera-plus">
   <ActionBar title="Camera Plus Demo" icon="" />
-  <ScrollView padding="10" orientation="vertical">
-    <StackLayout>
-      <StackLayout class="p-10">
-        <Label text="Anything else can go in your page or you can let the camera take up entire page layout. You can also add layout containers inside the CameraPlus to overlay view elements over the camera preview if needed." textWrap="true" />
-      </StackLayout>
-
-      <GridLayout >
+  <GridLayout rows="auto, *">
+       <GridLayout >
       <Cam:CameraPlus 
         height="{{ cameraHeight }}" id="camPlus" loaded="{{ camLoaded }}" 
         galleryPickerMode="multiple" enableVideo="true" confirmVideo="false" 
@@ -26,6 +21,12 @@
       </GridLayout>
       </GridLayout>
 
+        <ScrollView row="1" padding="10" orientation="vertical">
+    <StackLayout>
+      <StackLayout class="p-10">
+        <Label text="Anything else can go in your page or you can let the camera take up entire page layout. You can also add layout containers inside the CameraPlus to overlay view elements over the camera preview if needed." textWrap="true" />
+      </StackLayout>
+
       <Image height="150" id="testImagePickResult" src="{{ testImage }}" stretch="aspectFit" />
       <StackLayout class="p-10">
         <Label text="The buttons below are using the public methods for the Camera Plus." textWrap="true" />
@@ -42,4 +43,6 @@
 
     </StackLayout>
   </ScrollView>
+
+  </GridLayout>
 </Page>
