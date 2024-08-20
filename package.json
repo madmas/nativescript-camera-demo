@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@nstudio/nativescript-camera-plus": "5.0.0-alpha.7",
+    "@nstudio/nativescript-camera-plus": "5.0.0-alpha.12",
     "@nativescript/theme": "~3.0.2",
     "@nativescript/core": "~8.8.2"
   },
