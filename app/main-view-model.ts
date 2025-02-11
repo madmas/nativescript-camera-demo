@@ -154,6 +154,7 @@ export class HelloWorldModel extends Observable {
   camLoaded(args: any) {
     const cam = args.object as CameraPlus;
     console.log(`cam loaded event`);
+    (CameraPlus as any).useDeviceOrientation = true;
     const handle = () => {
       try {
         const sizes = cam.getAvailablePictureSizes("16:9");
