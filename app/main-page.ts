@@ -6,4 +6,9 @@ export function pageLoaded(args: EventData) {
   // Get the event sender
   const page = <Page>args.object;
   page.bindingContext = new HelloWorldModel(page);
+  global.shouldRotate = true;
+}
+
+export function navigatedTo(args: EventData) {
+  global.shouldRotate = false;
 }
