@@ -1,19 +1,21 @@
 {
   "dependencies": {
-    "@nstudio/nativescript-camera-plus": "^5.0.0",
+    "@nativescript/core": "~8.8.2",
     "@nativescript/theme": "~3.0.2",
-    "@nativescript/core": "~8.8.2"
+    "@nstudio/nativescript-camera-plus": "^5.0.0"
   },
   "devDependencies": {
+    "@nativescript/android": "~8.8.0",
     "@nativescript/ios": "~8.8.0",
     "@nativescript/types": "~8.8.0",
     "@nativescript/webpack": "~5.0.22",
-    "@nativescript/android": "~8.8.0",
+    "patch-package": "^8.0.0",
     "typescript": "~5.4.0"
   },
   "scripts": {
     "build.plugin": "cd ../src && npm run build",
-    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**' --exclude '**/platforms/**'"
+    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "postinstall": "patch-package"
   },
   "main": "./app/app.ts"
 }

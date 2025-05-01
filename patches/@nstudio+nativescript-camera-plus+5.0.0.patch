@@ -1,0 +1,10 @@
+diff --git a/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile b/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile
+index 5633555..6752406 100644
+--- a/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile
++++ b/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile
+@@ -1,4 +1,4 @@
+-pod 'SwiftyCam', :git => 'https://github.com/NathanWalker/SwiftyCam.git', :branch => 'feat/lens-wide-angle'
++pod 'SwiftyCam', :git => 'https://github.com/triniwiz/SwiftyCam.git', :branch => 'feat/lens-wide-angle'
+ pod "QBImagePickerController", :git => 'https://github.com/triniwiz/QBImagePicker.git', :commit => 'dd49f5e12964777b8b0ed1415902b8164598ca97'
+ 
+ post_install do |installer|
