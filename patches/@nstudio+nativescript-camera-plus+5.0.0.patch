@@ -1,3 +1,15 @@
+diff --git a/node_modules/@nstudio/nativescript-camera-plus/index.ios.js b/node_modules/@nstudio/nativescript-camera-plus/index.ios.js
+index 1ab37a9..0f0e4db 100644
+--- a/node_modules/@nstudio/nativescript-camera-plus/index.ios.js
++++ b/node_modules/@nstudio/nativescript-camera-plus/index.ios.js
+@@ -661,6 +661,7 @@ export class CameraPlus extends CameraPlusBase {
+         // experimenting with static flag (this is usually explicitly false)
+         // enable device orientation
+         this._swifty.shouldUseDeviceOrientation = CameraPlus.useDeviceOrientation;
++        this._swifty.shouldUseDeviceOrientationForPreview = CameraPlus.useDeviceOrientation;
+         this._detectDevice();
+     }
+     isVideoEnabled() {
 diff --git a/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile b/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile
 index 5633555..6752406 100644
 --- a/node_modules/@nstudio/nativescript-camera-plus/platforms/ios/Podfile

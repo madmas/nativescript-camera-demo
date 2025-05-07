@@ -9,45 +9,47 @@ import { CameraPlus } from '@nstudio/nativescript-camera-plus';
 
 //@ts-ignore
 CameraPlus.useDeviceOrientation = true;
-if (__IOS__) {
-  const CustomAppDelegate = (<any>UIResponder).extend(
-    {
-      applicationDidFinishLaunchingWithOptions: function (
-        application,
-        launchOptions
-      ) {
-        return true;
-      },
-      applicationSupportedInterfaceOrientationsForWindow: function (
-        application: UIApplication,
-        window: UIWindow
-      ) {
-        if (Device.deviceType === "Tablet") {
-          if ((<any>global).lockOrientation) {
-            if ((<any>global).lockPortrait) {
-              return UIInterfaceOrientationMask.Portrait;
-            } else {
-              return UIInterfaceOrientationMask.LandscapeRight;
-            }
-          } else {
-            return UIInterfaceOrientationMask.AllButUpsideDown;
-          }
-        } else {
-          if ((<any>global).shouldRotate) {
-            return UIInterfaceOrientationMask.AllButUpsideDown;
-          } else {
-            return UIInterfaceOrientationMask.Portrait;
-          }
-        }
-      },
-    },
-    {
-      name: "CustomAppDelegate",
-      protocols: [UIApplicationDelegate],
-    }
-  );
-  Application.ios.delegate = CustomAppDelegate;
-}
+// if (__IOS__) {
+//   const CustomAppDelegate = (<any>UIResponder).extend(
+//     {
+//       applicationDidFinishLaunchingWithOptions: function (
+//         application,
+//         launchOptions
+//       ) {
+//         return true;
+//       },
+//       applicationSupportedInterfaceOrientationsForWindow: function (
+//         application: UIApplication,
+//         window: UIWindow
+//       ) {
+//         /*
+//         if (Device.deviceType === "Tablet") {
+//           if ((<any>global).lockOrientation) {
+//             if ((<any>global).lockPortrait) {
+//               return UIInterfaceOrientationMask.Portrait;
+//             } else {
+//               return UIInterfaceOrientationMask.LandscapeRight;
+//             }
+//           } else {
+//             return UIInterfaceOrientationMask.AllButUpsideDown;
+//           }
+//         } else {
+//           console.log('rotate', (<any>global).shouldRotate);
+//           if ((<any>global).shouldRotate) {
+//             return UIInterfaceOrientationMask.AllButUpsideDown;
+//           } else {
+//             return UIInterfaceOrientationMask.Portrait;
+//           }
+//         } */
+//       },
+//     },
+//     {
+//       name: "CustomAppDelegate",
+//       protocols: [UIApplicationDelegate],
+//     }
+//   );
+//   Application.ios.delegate = CustomAppDelegate;
+// }
 
 Application.run({ moduleName: "app-root" });
 
