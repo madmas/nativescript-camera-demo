@@ -9,6 +9,7 @@ import { CameraPlus } from "@nstudio/nativescript-camera-plus";
 
 //@ts-ignore
 CameraPlus.useDeviceOrientation = true;
+/*
 (<any>global).shouldRotate = false;
 if (__IOS__) {
   const CustomAppDelegate = (<any>UIResponder).extend(
@@ -49,6 +50,7 @@ if (__IOS__) {
   );
   Application.ios.delegate = CustomAppDelegate;
 }
+*/
 
 Application.run({ moduleName: "app-root" });
 
